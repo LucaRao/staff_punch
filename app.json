@@ -1,0 +1,23 @@
+{
+  "pages":[
+    "pages/login/login",
+    "pages/scan/scan",
+    "pages/success/success",
+    "pages/create/create",
+    "pages/fail/fail",
+    "pages/self/self"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "打卡咯",
+    "navigationBarTextStyle":"black"
+  },
+  "debug": true,
+  "requiredPrivateInfos":["getLocation","chooseLocation"],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示" 
+    }
+  }
+}

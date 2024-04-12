@@ -120,7 +120,7 @@ async function insertPunch(param,callback) {
             param])
           .select()
   if (data) {
-    typeof callback == "function" && callback(true)
+    typeof callback == "function" && callback(data[0])
   } else if(error) {
     typeof callback == "function" && callback(false)
   }

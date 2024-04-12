@@ -88,8 +88,9 @@ Page({
           const data = { address: res.data.result.address, user_name: token.user_metadata.username,user_id:token.id,userLat:latitude,userLon:longitude };
           util.insertPunch(data, (data) => {
             if (data) {
+              data.created_at = util.formatTime(data.created_at);
               wx.navigateTo({
-                url: '/pages/success/success?place=' + res.address + '&time=' + data.create_at+'&status=work',
+                url: '/pages/success/success?place=' + data.address + '&time=' + data.created_at+'&status=work',
               })
             }
             else {
